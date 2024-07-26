@@ -1,8 +1,8 @@
 export class School{
-    constructor(name, INEP_code, address, bairro, contact, employees, teachers, classrooms, libraries, laboratories, internet, accessible_bathroom){
+    constructor(name, InepCode, address, bairro, contact, employees, teachers, classrooms, libraries, laboratories, internet, accessible_bathroom){
         this.id = Math.floor(Math.random() * 1000);
         this.name = name;
-        this.INEP_code = INEP_code;
+        this.InepCode = InepCode;
         this.address = address;
         this.bairro = bairro;
         this.contact = contact;

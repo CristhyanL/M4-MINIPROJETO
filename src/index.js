@@ -1,5 +1,5 @@
 import express from 'express';
-import {schoolRouter} from './src/routes/school.routes.js';
+import {schoolRouter} from './routes/school.routes.js';
 
 const app = express();
 const port = 2727;
