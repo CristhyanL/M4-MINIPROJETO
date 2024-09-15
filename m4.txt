@@ -1,0 +1,24 @@
+3 rotas GET (cada uma com uma funcionalidade)
+
+código identado e limpo
+sem erros
+rotas funcionando corretamente
+
+código separado por módulos ES6
+
+
+Possíveis dados:
+- Matrícula de alunos: Número de alunos por série, discriminação demográfica.
+- Proporção professor-aluno: comparação entre diferentes escolas e disciplinas.
+- Tamanho da sala de aula: Média e variação de tamanhos de sala de aula.
+I- nfraestrutura: Estado dos edifícios, bibliotecas, laboratórios e outras instalações.
+- Acesso à tecnologia: Disponibilidade de computadores, internet e recursos digitais.
+- Materiais curriculares: Disponibilidade e qualidade dos livros didáticos, materiais complementares.
+- Recursos de educação especial: Apoio a alunos com deficiência.
+
+Potenciais endpoints de API (refinados)
+/escolas: Fornece dados sobre escolas de ensino médio de São Gonçalo, incluindo localização, porte e informações básicas.
+/resources/:school_id: Fornece informações detalhadas sobre os recursos disponíveis em uma escola específica (por exemplo, número de computadores, tamanho da biblioteca).
+/student_data/:school_id: Fornece dados agregados de alunos (por exemplo, matrícula, desempenho) de uma escola específica (com medidas de privacidade apropriadas).
+/teacher_data/:school_id: Fornece dados agregados de professores (por exemplo, qualificações, experiência) para uma escola específica (com medidas de privacidade apropriadas).
+

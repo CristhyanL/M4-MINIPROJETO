@@ -5,17 +5,22 @@ const schoolRouter = Router();
 
 // Cadastrando uma nova escola
 schoolRouter.post("/createSchool",  (req,res)=> {
-    const {name, InepCode, address, bairro, contact, employees, teachers, classrooms, libraries, laboratories, 
-    internet, accessible_bathroom} = req.body;
+    const {
+        name, InepCode, address, bairro, contact, employees, teachers, classrooms, 
+        libraries, laboratories, internet, accessible_bathroom
+    } = req.body;
 
-    const newSchool = createSchool(name, InepCode, address, bairro, contact, employees, 
-  teachers, classrooms, libraries, laboratories, 
-  internet, accessible_bathroom, teachers, classrooms, libraries, laboratories, internet, accessible_bathroom);
+    const newSchool = createSchool(
+        name, InepCode, address, bairro, contact, employees, 
+        teachers, classrooms, libraries, laboratories, 
+        internet, accessible_bathroom
+    );
+
     res.status(201).json({newSchool})
 });
 
 //Pesquisando todas as Escolas cadastradas
-schoolRouter.get("/searchschool", (req,res) => {
+schoolRouter.get("/schools", (req,res) => {
     let result = allSchools();
     res.status(200).json({result});
 });
@@ -30,10 +35,14 @@ schoolRouter.delete("/deleteSchool/:id", (req,res)=> {
 //Pesquisando uma Escola Pelo InepCode
 schoolRouter.get("/school/INEP/:InepCode", (req,res)=> {
     const { InepCode } = req.params;
-    console.log(InepCode);
-    const school = searchByInepCode(parseInt(InepCode)); console.log(school);
-        res.status(200).json({ school });
-        res.status(404).json({ message: "Não temos o cadastro da escola com o código inep digitado"});
+
+    const school = searchByInepCode(parseInt(InepCode));
+    if (school) {
+        return res.status(200).json({ school });
+    } else {
+        return res.status(404).json({ message: "Não temos o cadastro da escola com o código inep digitado"});
+    }
+        
 });
 
 //Pesquisando uma Escola por Bairro

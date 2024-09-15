@@ -1,0 +1,48 @@
+Requisitos:
+- 3 rotas GET (cada uma com uma funcionalidade)
+- código identado e limpo
+- sem erros
+- rotas funcionando corretamente
+- código separado por módulos ES6
+==============================================
+API de Alocação de Recursos Educacionais
+Mapear dados importantes de escolas públicas, localização urbana, estaduais de E.M. da Região de São Gonçalo, 
+para ter uma noção de onde o governo pode alocar recursos
+
+Obs.: Os dados de nome, código INEP, Endereço, Telefone, Porte da Escola, Latitude e Longitude, foram retirados do site do INEP;
+	Já os dados de Infraestutura, Acesso à tecnologia,  Quantidade de funcionários e Recursos de educação especial, foram retirados dos sites https://culturaeduca.cc/ e https://escolas.com.br/
+	Porém, a quantidade de Professores e Estado dos edifícios foram inventados!
+
+site INEP: https://inepdata.inep.gov.br/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FCenso%20da%20Educa%C3%A7%C3%A3o %20B%C3%A1sica%2F_portal%2FCat%C3%A1logo%20de%20Escolas&Page=Lista%20das%20Escolas&P1=dashboard&Action=Navigate&ViewState=t2ocsgdvjeebk850d2fan438f2&P16=NavRuleDefault&NavFromViewID=d%3Adashboard~p% 3Asf156n9k0qs70741
+
+Possíveis dados:
+- Name
+- Código INEP
+- Endereço
+- Telefone
+- Quantidade de alunos
+- Quantidade de Funcionários: 
+	áreas que trabalham(3 Prof.Matemática, 1 secretária, 2 pedagoga, 1 coordenadora)
+- Infraestrutura: 
+	Estado dos edifícios(Completo, Inadequado, Inacabado, Construindo), 
+	Quantidade de bibliotecas, 
+	Quantidade de laboratórios,
+	Quantidade de salas de aula
+- Acesso à tecnologia: Disponibilidade de computadores(sim, não), internet(sim,não)
+- Recursos de educação especial: 
+	Apoio a alunos com deficiência(sim,não)
+
+nome, código INEP, Porte da Escola, estado dos edifícios, bibliotecas, internet e Banheiro acessível(PCD)
+id, name, INEP_code, adress, contact, employees, teachers, classrooms, libraries, laboratories, internet, acessible_bathroom
+
+Criar novos Escolas(POST)
+ 
+Buscar escolas(GET)
+
+Buscar escolas que possuem ou não bibliotecas(GET/name/libraries)
+
+Deletar escolas(DELETE): Remova escolas que não existem mais.
+
+Editar escolas(PUT): Atualizar quaisquer informações de escolas já criadas.
+
+ 
