@@ -11,7 +11,8 @@ export class School {
     libraries,
     laboratories,
     internet,
-    accessible_bathroom
+    accessible_bathroom,
+    imageUrl
   ) {
     this.id = Math.floor(Math.random() * 1000);
     this.name = name;
@@ -26,5 +27,6 @@ export class School {
     this.laboratories = laboratories;
     this.internet = internet;
     this.accessible_bathroom = accessible_bathroom;
+    this.imageUrl = imageUrl;
   }
 }

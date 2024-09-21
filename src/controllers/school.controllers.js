@@ -16,6 +16,7 @@ const registerSchool = [
     laboratories: "NÃO",
     internet: "SIM",
     accessible_bathroom: "NÃO",
+    imageUrl: "Padilha.png",
   },
   {
     name: "CE NILO PECANHA",
@@ -31,6 +32,7 @@ const registerSchool = [
     laboratories: "NÃO",
     internet: "SIM",
     accessible_bathroom: "SIM",
+    imageUrl: "Nilo.png",
   },
   {
     name: "CE WALTER ORLANDINE",
@@ -47,6 +49,7 @@ const registerSchool = [
     laboratories: "SIM",
     internet: "SIM",
     accessible_bathroom: "SIM",
+    imageUrl: "Walter.png",
   },
   {
     name: "CE SUBTENENTE PM MARCO ANTONIO GRIPP",
@@ -62,6 +65,7 @@ const registerSchool = [
     laboratories: "NÃO",
     internet: "SIM",
     accessible_bathroom: "SIM",
+    imageUrl: "Gripp.png",
   },
   {
     name: "CE CORONEL PM MARCUS JARDIM",
@@ -78,6 +82,7 @@ const registerSchool = [
     laboratories: "NÃO",
     internet: "SIM",
     accessible_bathroom: "NÃO",
+    imageUrl: "Jardim.png",
   },
   {
     name: "CE COMENDADOR VALENTIM DOS SANTOS DINIZ",
@@ -94,6 +99,7 @@ const registerSchool = [
     laboratories: "SIM",
     internet: "SIM",
     accessible_bathroom: "SIM",
+    imageUrl: "NATA.png",
   },
 ];
 
@@ -109,7 +115,8 @@ export const createSchool = (
   libraries,
   laboratories,
   internet,
-  accessible_bathroom
+  accessible_bathroom,
+  imageUrl
 ) => {
   let school = new School(
     name,
@@ -123,7 +130,8 @@ export const createSchool = (
     libraries,
     laboratories,
     internet,
-    accessible_bathroom
+    accessible_bathroom,
+    imageUrl
   );
   registerSchool.push(school);
   return school;

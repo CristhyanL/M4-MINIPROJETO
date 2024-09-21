@@ -25,6 +25,7 @@ schoolRouter.post("/createSchool", (req, res) => {
       laboratories,
       internet,
       accessible_bathroom,
+      imageUrl
     } = req.body;
 
     if (!name || !InepCode || !address || !contact) {
@@ -43,7 +44,8 @@ schoolRouter.post("/createSchool", (req, res) => {
       libraries,
       laboratories,
       internet,
-      accessible_bathroom
+      accessible_bathroom,
+      imageUrl
     );
 
     res.status(201).json({ newSchool });
